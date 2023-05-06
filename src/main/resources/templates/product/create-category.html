@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.thymeleaf.org ">
+<html xmlns:th="http://www.thymeleaf.org" lang="English">
 <head>
     <meta charset="UTF-8">
     <title>Create Category</title>
 </head>
 <body>
 <h1>Create Category</h1>
-<form th:action="@{/categories}" th:object="${category}" method="post">
+<form th:action="@{/categories}" th:object="${mainCategory}" method="post">
     <label for="name">Name:</label>
     <input type="text" th:field="*{name}" id="name"/>
     <button type="submit">Create</button>

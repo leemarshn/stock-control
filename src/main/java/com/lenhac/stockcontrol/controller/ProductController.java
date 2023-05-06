@@ -1,10 +1,8 @@
 package com.lenhac.stockcontrol.controller;
 
-import com.lenhac.stockcontrol.model.Category;
+import com.lenhac.stockcontrol.model.MainCategory;
 import com.lenhac.stockcontrol.repositories.CategoryRepository;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,14 +21,14 @@ public class ProductController {
     @GetMapping("/categories/new")
     public ModelAndView showCategoryForm() {
         ModelAndView mav = new ModelAndView("product/create-category");
-        Category category = new Category();
-        mav.addObject("category", category);
+        MainCategory mainCategory = new MainCategory();
+        mav.addObject("category", mainCategory);
         return mav;
 
     }
     @PostMapping("/categories")
-    public String createCategory(@ModelAttribute("category") Category category) {
-        categoryRepository.save(category);
+    public String createCategory(@ModelAttribute("category") MainCategory mainCategory) {
+        categoryRepository.save(mainCategory);
         return "redirect:/categories/new";
     }
 

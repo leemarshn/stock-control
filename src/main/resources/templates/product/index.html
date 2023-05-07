@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        /* Style the icons */
+        .icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        /* Style the logo */
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+        }
+        /* Style the top row with logo */
+        .top-row {
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+        /* Style the navigation on the left */
+        .nav-pills > li > a {
+            color: black;
+        }
+        .navbar-right li a {
+            color: #fff;
+        }
+
+        .navbar-right li a:hover {
+            background-color: transparent !important;
+            border-radius: 0 !important;
+            color: red;
+        }
+
+        .nav-pills > li.active > a,
+        .nav-pills > li.active > a:hover,
+        .nav-pills > li.active > a:focus {
+            background-color: #f5f5f5;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <!-- Logo and user-related icons row -->
+    <div class="row top-row">
+        <div class="col-sm-6">
+            <a class="navbar-brand logo" href="#">Your Logo</a>
+        </div>
+        <div class="col-sm-6">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-question-sign"></span></a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-bell"></span></a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navigation and template row -->
+    <div class="row">
+        <!-- Navigation on the left -->
+        <div class="col-sm-2" style="background-color: #f5f5f5;">
+            <ul class="nav nav-pills nav-stacked">
+                <li><a href="#"><span class="glyphicon glyphicon-home icon"></span>Home</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-shopping-cart icon"></span>Sell</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-stats icon"></span>Reporting</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-th icon"></span>Catalog</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-list-alt icon"></span>Inventory</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-user icon"></span>Customers</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-folder-open icon"></i>Suppliers</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-cog icon"></span>Settings</a></li>
+            </ul>
+        </div>
+        <!-- Template on the right -->
+        <div class="col-sm-10">
+            <h3>Bootstrap Template</h3>
+            <p>This is a sample template with a navigation bar and some icons.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

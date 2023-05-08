@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inventory System</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+
+
+    <style>
+    .top-row {
+        background-color: #f7f7f7;
+        padding: 10px;
+    }
+
+    .main-menu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .main-menu li {
+        margin-right: 20px;
+    }
+
+    .main-menu li:last-child {
+        margin-right: 0;
+    }
+
+    .main-menu li a {
+        color: #333;
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    .main-menu li.active a {
+        color: #fff;
+        background-color: #337ab7;
+    }
+
+    .btn-primary {
+        margin-right: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .top-row {
+            display: none;
+        }
+    }
+
+
+</style>
+</head>
+<body>
+<div class="container">
+        <div class="row top-row">
+            <div class="col-sm-6">
+                <ul class="nav main-menu">
+                    <li role="presentation" class="active"><a href="#">Variants</a></li>
+                    <li role="presentation"><a href="#">Attributes</a></li>
+                    <li role="presentation"><a href="#">Brands</a></li>
+                    <li role="presentation"><a href="#">Types</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-6 text-right">
+                <button type="button" class="btn btn-primary">Add Product</button>
+                <button type="button" class="btn btn-danger">Import</button>
+            </div>
+        </div>
+
+
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row" style="padding: 10px;">
+                <div class="col-md-3">
+                    <label for="product_search">Search:</label>
+                    <input type="text" class="form-control" id="product_search">
+                </div>
+                <div class="col-md-3">
+                    <label for="product_category">Product Category Type:</label>
+                    <select class="form-control" id="product_category">
+                        <option value="">All</option>
+                        <option value="1">Category 1</option>
+                        <option value="2">Category 2</option>
+                        <option value="3">Category 3</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="supplier_type">Supplier Type:</label>
+                    <select class="form-control" id="supplier_type">
+                        <option value="">All</option>
+                        <option value="1">Supplier 1</option>
+                        <option value="2">Supplier 2</option>
+                        <option value="3">Supplier 3</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <button type="submit" class="btn btn-primary" style="margin-top: 25px;">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-12 text-right">
+            <a href="#" class="btn btn-default">Export</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th><input type="checkbox" id="check-all"></th>
+                    <th>Product</th>
+                    <th>Supplier</th>
+                    <th>Inventory</th>
+                    <th>Retail Price</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Product 1</td>
+                    <td>Supplier A</td>
+                    <td>10</td>
+                    <td>$10.00</td>
+                    <td><a href="#"><span class="glyphicon glyphicon-pencil"></span></a></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Product 2</td>
+                    <td>Supplier B</td>
+                    <td>5</td>
+                    <td>$15.00</td>
+                    <td><a href="#"><span class="glyphicon glyphicon-pencil"></span></a></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Product 3</td>
+                    <td>Supplier C</td>
+                    <td>20</td>
+                    <td>$20.00</td>
+                    <td><a href="#"><span class="glyphicon glyphicon-pencil"></span></a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNVQ8dT"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

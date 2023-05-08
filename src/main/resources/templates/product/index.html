@@ -8,27 +8,75 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
+
+
+        .secondary-row {
+            background-color: #f7f7f7;
+            padding: 10px;
+        }
+
+        .main-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-menu li {
+            margin-right: 20px;
+        }
+
+        .main-menu li:last-child {
+            margin-right: 0;
+        }
+
+        .main-menu li a {
+            color: #333;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .main-menu li.active a {
+            color: #fff;
+            background-color: #337ab7;
+        }
+
+        .btn-primary {
+            margin-right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .top-row {
+                display: none;
+            }
+        }
+
+
         /* Style the icons */
         .icon {
             font-size: 24px;
             margin-right: 10px;
         }
+
         /* Style the logo */
         .logo {
             font-size: 28px;
             font-weight: bold;
             color: white;
         }
+
         /* Style the top row with logo */
         .top-row {
             background-color: black;
             color: white;
             padding: 10px;
         }
+
         /* Style the navigation on the left */
         .nav-pills > li > a {
             color: black;
         }
+
         .navbar-right li a {
             color: #fff;
         }
@@ -53,7 +101,8 @@
     <!-- Logo and user-related icons row -->
     <div class="row top-row">
         <div class="col-sm-6">
-            <a class="navbar-brand logo" href="#">Your Logo</a>
+            <a class="navbar-brand logo" href=""><img src="../../static/images/lenhac-logo-reverse-white.png"
+                                                       width="150"/></a>
         </div>
         <div class="col-sm-6">
             <nav class="navbar">
@@ -84,11 +133,110 @@
         </div>
         <!-- Template on the right -->
         <div class="col-sm-10">
-            <h3>Bootstrap Template</h3>
-            <p>This is a sample template with a navigation bar and some icons.</p>
+            <!-- Secondary Menu Area-->
+            <div class="row secondary-row">
+                <div class="col-sm-8">
+                    <ul class="nav main-menu">
+                        <li role="presentation"><a href="#">Variants</a></li>
+                        <li role="presentation"><a href="#">Attributes</a></li>
+                        <li role="presentation"><a href="#">Brands</a></li>
+                        <li role="presentation"><a href="#">Types</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 text-right">
+                    <button type="button" class="btn btn-primary">Add Product</button>
+                    <button type="button" class="btn btn-danger">Import</button>
+                </div>
+            </div>
+            <!-- search area -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="row" style="padding: 10px;">
+                        <div class="col-md-3">
+                            <label for="product_search"><b>Search for products</b></label>
+                            <input type="text" placeholder="Name or SKU" class="form-control" id="product_search">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="product_category"><b>Product Category:</b></label>
+                            <select class="form-control" id="product_category">
+                                <option value="">All</option>
+                                <option value="1">Category 1</option>
+                                <option value="2">Category 2</option>
+                                <option value="3">Category 3</option>
+                                <option value="4">Category 4</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="supplier_type"><b>Supplier:</b></label>
+                            <select class="form-control" id="supplier_type">
+                                <option value="">All</option>
+                                <option value="1">Supplier 1</option>
+                                <option value="2">Supplier 2</option>
+                                <option value="3">Supplier 3</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <button type="submit" class="btn btn-primary" style="margin-top: 25px;">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                    <!-- export button -->
+                    <div class="row">
+                        <div class="col-sm-12 text-right">
+                            <a href="#" class="btn btn-default">Export</a>
+                        </div>
+                    </div>
+
+                    <!-- Begin Table -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th><input type="checkbox" id="check-all"></th>
+                                    <th>Product</th>
+                                    <th>Supplier</th>
+                                    <th>Inventory</th>
+                                    <th>Retail Price</th>
+                                    <th>Actions</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>Product 1</td>
+                                    <td>Supplier A</td>
+                                    <td>10</td>
+                                    <td>$10.00</td>
+                                    <td><a href="#"><span class="glyphicon glyphicon-pencil"></span></a></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>Product 2</td>
+                                    <td>Supplier B</td>
+                                    <td>5</td>
+                                    <td>$15.00</td>
+                                    <td><a href="#"><span class="glyphicon glyphicon-pencil"></span></a></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>Product 3</td>
+                                    <td>Supplier C</td>
+                                    <td>20</td>
+                                    <td>$20.00</td>
+                                    <td><a href="#"><span class="glyphicon glyphicon-pencil"></span></a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+
 
 </body>
 </html>
